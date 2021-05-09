@@ -1,0 +1,26 @@
+FROM nicodman/thesis:system
+
+ARG MACHTYPE=default
+
+####################
+USER root
+####################
+
+RUN python3 -m pip install tensorflow==1.5.0 && \
+		python3 -m pip install scikit-learn==0.22.2 && \
+		python3 -m pip install matplotlib && \
+		python3 -m pip install scikit-build
+
+RUN usermod -a -G video robot		
+
+####################
+USER robot
+####################
+
+RUN mkdir -p $HOME/src && cd $HOME/src && \
+		git clone https://github.com/nicod-man/Person-Detection-and-Tracking.git
+		
+WORKDIR /home/robot/src/Person-Detection-and-Tracking
+
+CMD ["/usr/bin/python3","Person_det_track.py"]
+

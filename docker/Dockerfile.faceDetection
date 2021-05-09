@@ -1,0 +1,29 @@
+###### Dockerfile for FD (Face-Detection) ######
+## https://github.com/ageitgey/face_recognition
+
+FROM nicodman/thesis:system
+
+ARG MACHTYPE=default
+		
+#####################
+USER root
+#####################		
+
+RUN python3 -m pip install face_recognition
+
+# Giving permission to the user robot to access the camera
+RUN usermod -a -G video robot		
+
+#####################
+USER robot
+#####################
+
+RUN echo "set -g mouse on" > $HOME/.tmux.conf 
+
+RUN mkdir -p $HOME/src && cd $HOME/src && \
+		git clone https://github.com/nicod-man/face_recognition.git
+
+WORKDIR home/robot/src/face_recognition/examples
+
+#CMD ["/usr/bin/tmux"]
+CMD ["/usr/bin/python3","facerec_from_webcam.py"]
