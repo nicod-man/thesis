@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+
+    persondetection:
+        image: nicodman/thesis:persondetection
+        container_name: persondetection_container
+        dns: 8.8.8.8
+        network_mode: "host"
+        stdin_open: true #docker run -i
+        tty: true               #docker run -t
+        environment:
+            - DISPLAY=:0
+        privileged: true
+        devices:
+            - /dev/video0:/dev/video0
+        volumes:
+            - $SPD_DIR/models/Person-Detection-and-Tracking:/home/robot/src/Person-Detection-and-Tracking
+            - /tmp/.X11-unix:/tmp/.X11-unix:rw
+        #command: 
+        #    - bash -c "python3 Person_det_track.py"
+            
+        entrypoint:
+            - bash
+            - -ci
+            - "python3 Person_det_track.py"

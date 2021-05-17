@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGENAME=bodypix
+IMAGENAME=pd
 
 VERSION=latest
 if [ ! "$1" == "" ]; then
