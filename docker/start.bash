@@ -2,7 +2,7 @@
 
 #home/nico/stagepersondetection
 
-DCF=docker-compose.yml
+DCF=docker-compose.yml 
 XSERVER=""
 
 export SPD_DIR=`pwd | gawk '{ print gensub(/\/docker/, "", 1) }'` 
