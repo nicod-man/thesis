@@ -1,0 +1,9 @@
+[submodule "models/Person-Detection-and-Tracking"]
+	path = models/Person-Detection-and-Tracking
+	url = https://github.com/nicod-man/Person-Detection-and-Tracking.git
+[submodule "models/face_recognition"]
+	path = models/face_recognition
+	url = https://github.com/nicod-man/face_recognition.git
+[submodule "models/Real-Time-Face-Expression-Recognition"]
+	path = models/Real-Time-Face-Expression-Recognition
+	url = https://github.com/nicod-man/Real-Time-Face-Expression-Recognition.git
