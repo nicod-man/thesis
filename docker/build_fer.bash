@@ -4,13 +4,13 @@
 
 IMAGENAME=facialexpressionrecognition
 
-DOCKERFILE=Dockerfile.ExpressionRec
+DOCKERFILE=Dockerfile.expressionRec
 
 VERSION=latest
 if [ ! "$2" == "" ]; then
   VERSION=$2
 fi
 
-docker build -t $IMAGENAME:$VERSION -f $DOCKERFILE 
+docker build -t $IMAGENAME:$VERSION -f $DOCKERFILE .
 docker tag $IMAGENAME:$VERSION nicodman/thesis:faceExpression
 
