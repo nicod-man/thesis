@@ -2,7 +2,7 @@
 
 # Use  ./build.bash [Dockerfile] [version]
 
-IMAGENAME=PersonDetection
+IMAGENAME=persondetection
 
 DOCKERFILE=Dockerfile.personDetection
 if [ ! "$1" == "" ]; then

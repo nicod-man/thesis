@@ -2,7 +2,7 @@
 
 # Use  ./build.bash [Dockerfile] [version]
 
-IMAGENAME=FaceDetection
+IMAGENAME=facedetection
 
 DOCKERFILE=Dockerfile.faceDetection
 if [ ! "$1" == "" ]; then

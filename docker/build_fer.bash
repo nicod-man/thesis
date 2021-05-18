@@ -2,7 +2,7 @@
 
 # Use  ./build.bash [Dockerfile] [version]
 
-IMAGENAME=fer
+IMAGENAME=facialexpressionrecognition
 
 DOCKERFILE=Dockerfile.ExpressionRec
 
