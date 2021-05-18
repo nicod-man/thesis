@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGENAME=facedetection
+IMAGENAME=FaceDetection
 
 VERSION=latest
 if [ ! "$1" == "" ]; then
@@ -16,7 +16,7 @@ SPD_DIR=`pwd | gawk '{ print gensub(/\/docker/, "", 1) }'`
 echo "Running image $IMAGENAME:$VERSION ..."
 
 docker run -it \
-	--name FACEDETECTION --rm \
+	--name FaceDetection --rm \
 	--privileged \
 	--net=host \
 	--device=/dev/video0:/dev/video0 \

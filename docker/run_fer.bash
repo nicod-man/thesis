@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGENAME=fer
+IMAGENAME=FacialExpressionRecognition
 
 VERSION=latest
 if [ ! "$1" == "" ]; then
@@ -16,7 +16,7 @@ SPD_DIR=`pwd | gawk '{ print gensub(/\/docker/, "", 1) }'`
 echo "Running image $IMAGENAME:$VERSION ..."
 
 docker run -it \
-	--name FER --rm \
+	--name FacialExpressionRecognition --rm \
 	--privileged \
 	--net=host \
 	--env="DISPLAY" \
