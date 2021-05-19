@@ -1,6 +1,6 @@
 The following instructions will allow you to install all the docker components.
 
-The first thing needed is to download [Docker](https://docs.docker.com/get-docker/). 
+The first thing needed is to download [Docker](https://docs.docker.com/get-docker/) and see [Post-installation steps for linux](https://docs.docker.com/engine/install/linux-postinstall/) to make sure that Docker will work properly.
 Then you can clone this repository:
 
 	git clone https://github.com/nicod-man/thesis.git
