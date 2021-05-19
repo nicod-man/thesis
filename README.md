@@ -25,5 +25,4 @@ Note: when running the "facial expression recognition" image, go to:
 
 	http://localhost:5000
 	
-(where the port has been set to 5000 by default) to be able to see it working.
-Also, make sure to have a webcam connected.
+to be able to see it working. Also, make sure to have a webcam connected.
