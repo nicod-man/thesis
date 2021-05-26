@@ -9,5 +9,4 @@
 sleep 3
 
 docker-compose down
-
 docker container prune -f
