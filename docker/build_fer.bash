@@ -11,6 +11,6 @@ if [ ! "$2" == "" ]; then
   VERSION=$2
 fi
 
-docker build -t $IMAGENAME:$VERSION -f $DOCKERFILE .
+docker build -t $IMAGENAME:$VERSION -f $DOCKERFILE . --no-cache
 docker tag $IMAGENAME:$VERSION nicodman/thesis:faceExpression
 

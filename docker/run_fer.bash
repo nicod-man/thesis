@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGENAME=FacialExpressionRecognition
+IMAGENAME=facialexpressionrecognition
 
 VERSION=latest
 if [ ! "$1" == "" ]; then
