@@ -32,5 +32,4 @@ RUN mkdir -p $HOME/src && cd $HOME/src && \
 WORKDIR home/robot/src/Real-Time-Face-Expression-Recognition
 
 #CMD ["/usr/bin/tmux"]
-#CMD ["/usr/bin/python3","main.py"]
 CMD ["/usr/bin/python3","stage_fer.py", "--server", "-modelname", "fer"]

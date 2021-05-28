@@ -8,8 +8,8 @@ export SPD_DIR=`pwd | gawk '{ print gensub(/\/docker/, "", 1) }'`
 
 echo "Running all services..."
 
-docker-compose -f $DCF pull $XSERVER persondetection facedetection fer
-docker-compose -f $DCF up -d $XSERVER persondetection facedetection fer
+docker-compose -f $DCF pull $XSERVER fer
+docker-compose -f $DCF up -d $XSERVER fer
 
 sleep 5
 docker ps
