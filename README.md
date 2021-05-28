@@ -24,8 +24,10 @@ To run the images:
 	./run_fer.bash
 	./run.pd_bash
 	
-Note: when running the "Facial Expression Recognition (fer)" image, go to:
+The FacialExpressionRecognition will start automatically in server-client modality.
+To send an image and evaluate it, in a new terminal:
 
-	http://localhost:5000
+	echo "EVAL dataset/test/fer2.jpg" | netcat -w 3 localhost 9250
 	
-to be able to see it working. Also, make sure to have a webcam connected.
+- Note: the image must be accessible from the docker container running the server.
+  Make sure also to share volume between the image acquisition process and the detection server.
