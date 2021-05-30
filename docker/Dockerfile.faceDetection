@@ -1,15 +1,41 @@
 ###### Dockerfile for FD (Face-Detection) ######
 ## https://github.com/ageitgey/face_recognition
+#FROM nicodman/thesis:system
+#ARG MACHTYPE=default
+#####################
+#USER root
+#####################		
+#RUN python3 -m pip install face_recognition
+# Giving permission to the user robot to access the camera
+#RUN usermod -a -G video robot		
+#####################
+#USER robot
+#####################
+#RUN echo "set -g mouse on" > $HOME/.tmux.conf 
+#RUN mkdir -p $HOME/src && cd $HOME/src && \
+#		git clone https://github.com/nicod-man/face_recognition.git
+#WORKDIR home/robot/src/face_recognition/examples
+#CMD ["/usr/bin/tmux"]
+#CMD ["/usr/bin/python3","facerec_from_webcam.py"]
+
+###### Dockerfile for FER (Face-Expression-Recognition) ######
+## Source: https://github.com/jonathanoheix/Real-Time-Face-Expression-Recognition.git
 
 FROM nicodman/thesis:system
 
 ARG MACHTYPE=default
-		
-#####################
-USER root
-#####################		
 
-RUN python3 -m pip install face_recognition
+####################
+USER root
+####################
+
+RUN python3 -m pip install --upgrade setuptools pip && \
+		python3 -m pip install keras==2.2.4 && \
+		python3 -m pip install tensorflow==1.13.1	&& \	
+		python3 -m pip install flask==1.1.2 && \
+		python3 -m pip install scikit-build && \		
+		python3 -m pip install scipy && \
+		python3 -m pip install h5py==2.8 
 
 # Giving permission to the user robot to access the camera
 RUN usermod -a -G video robot		
@@ -21,9 +47,9 @@ USER robot
 RUN echo "set -g mouse on" > $HOME/.tmux.conf 
 
 RUN mkdir -p $HOME/src && cd $HOME/src && \
-		git clone https://github.com/nicod-man/face_recognition.git
+		git clone https://github.com/nicod-man/Real-Time-Face-Expression-Recognition.git
 
-WORKDIR home/robot/src/face_recognition/examples
+WORKDIR home/robot/src/Real-Time-Face-Expression-Recognition
 
 #CMD ["/usr/bin/tmux"]
-CMD ["/usr/bin/python3","facerec_from_webcam.py"]
+CMD ["/usr/bin/python3","stage_pd.py", "--server", "-modelname", "fer"]
