@@ -2,7 +2,7 @@
 
 The only components needed are the following:
 
-- [Docker](https://docs.docker.com/get-docker/) and see [Post-installation steps for linux](https://docs.docker.com/engine/install/linux-postinstall/) to make sure that Docker will work properly.
+- [Docker](https://docs.docker.com/get-docker/) (see [Post-installation steps for linux](https://docs.docker.com/engine/install/linux-postinstall/) to make sure that Docker will work properly.
 
 - [Docker-compose](https://docs.docker.com/compose/install/)
 
