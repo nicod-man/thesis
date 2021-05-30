@@ -52,4 +52,4 @@ RUN mkdir -p $HOME/src && cd $HOME/src && \
 WORKDIR home/robot/src/Real-Time-Face-Expression-Recognition
 
 #CMD ["/usr/bin/tmux"]
-CMD ["/usr/bin/python3","stage_pd.py", "--server", "-modelname", "fer"]
+CMD ["/usr/bin/python3","stage_fd.py", "--server", "-modelname", "fer"]
