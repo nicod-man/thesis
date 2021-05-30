@@ -10,7 +10,7 @@ Once you have installed it, clone this repository:
 
 	git clone https://github.com/nicod-man/thesis.git
 
-Since it is made up with submodules, cloning the repo will automatically downoad all the needed submodules.
+The repository is made up with submodules, therefore cloning it will download all the needed submodules.
 
 To create images and run all the containers, launch the script:
 
