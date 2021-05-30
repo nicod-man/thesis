@@ -21,6 +21,6 @@ docker run -it \
 	--net=host \
 	--device=/dev/video0:/dev/video0 \
 	-e DISPLAY=$DISPLAY \
-	-v $SPD_DIR/models/face_recognition/:/home/robot/src/face_recognition/ \
+	-v $SPD_DIR/models/Real-Time-Face-Expression-Recognition:/home/robot/src/Real-Time-Face-Expression-Recognition \
 	-v /tmp/.X11-unix:/tmp/.X11-unix \
 	$IMAGENAME:$VERSION

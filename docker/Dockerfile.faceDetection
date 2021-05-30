@@ -36,6 +36,10 @@ RUN python3 -m pip install --upgrade setuptools pip && \
 		python3 -m pip install scikit-build && \		
 		python3 -m pip install scipy && \
 		python3 -m pip install h5py==2.8 
+		
+RUN apt-get update && \
+		apt-get install -y \
+			libcanberra-gtk-module libcanberra-gtk3-module
 
 # Giving permission to the user robot to access the camera
 RUN usermod -a -G video robot		
