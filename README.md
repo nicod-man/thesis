@@ -28,7 +28,9 @@ To send an image and evaluate it, in separate terminals launch:
 where port 9250 and port 9251 allows to comunicate respectively with the Face Expression Recognition module and the Face Detection.
 Once the faces have been detected, the Face Detection module will display for 6 seconds the image and it will then automatically close it (e.g.):
 
-![](https://github.com/nicod-man/thesis/blob/main/images/face_detection.jpg)
+<br>
+<img height="850" width="700" src="https://github.com/nicod-man/thesis/blob/main/images/face_detection.jpg"/>
+</br>
 	
 To stop and remove the running containers:
 
