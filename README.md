@@ -6,7 +6,7 @@ The only components needed are the following:
 
 - [Docker-compose](https://docs.docker.com/compose/install/)
 
-Once you have installed it, clone this repository: 
+Once you have installed both components, clone this repository: 
 
 	git clone --recurse-submodule -j8 https://github.com/nicod-man/thesis.git
 
