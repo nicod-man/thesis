@@ -26,7 +26,9 @@ To send an image and evaluate it, in separate terminals launch:
 	echo "EVAL dataset/test/test2.jpg" | netcat -w 3 localhost 9251
 
 where port 9250 and port 9251 allows to comunicate respectively with the Face Expression Recognition module and the Face Detection.
-Once the faces have been detected, the Face Detection module will display for 6 seconds the image and it will then automatically close it.
+Once the faces have been detected, the Face Detection module will display for 6 seconds the image and it will then automatically close it (e.g.):
+
+https://github.com/nicod-man/thesis/blob/main/images/face_detection.jpg
 	
 To stop and remove the running containers:
 
