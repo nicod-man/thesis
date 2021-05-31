@@ -27,7 +27,7 @@ To send an image and evaluate it, in separate terminals launch:
 
 where port 9250 and port 9251 allows to comunicate respectively with the Face Expression Recognition module and the Face Detection.
 	
-To stop and remove the running container:
+To stop and remove the running containers:
 
 	./stop.bash
 
