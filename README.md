@@ -6,14 +6,16 @@ The only components needed are the following:
 
 - [Docker-compose](https://docs.docker.com/compose/install/)
 
-Once you have installed it, clone this repository:
+Once you have installed it, clone this repository: 
 
 	git clone --recurse-submodule -j8 https://github.com/nicod-man/thesis.git
 
-The repository is made up with submodules, therefore cloning it will download all the needed submodules.
+Since the repository is made up with submodules, make sure to use the flag "--recurse-submodules"; the flag "-j8" is an optional performance optimization that fetches up to 8 submodules at a time in parallel.
 
-To create images and run all the containers, launch the script:
 
+To create images and run all the containers, launch the script in the docker folder:
+
+	cd /path_to_docker_folder
 	./start.bash
 	
 It will automatically pull the images and start the containers in server-client modality.	
