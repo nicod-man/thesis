@@ -1,4 +1,7 @@
-# Thesis
+# THESIS
+
+
+## Install
 
 The only components needed are the following:
 
@@ -6,12 +9,15 @@ The only components needed are the following:
 
 - [Docker-compose](https://docs.docker.com/compose/install/)
 
+## Setup
+
 Once you have installed both components, clone this repository: 
 
 	git clone --recurse-submodule -j8 https://github.com/nicod-man/thesis.git
 
 Since the repository is made up with submodules, make sure to use the flag "--recurse-submodules"; the flag "-j8" is an optional performance optimization that fetches up to 8 submodules at a time in parallel.
 
+## Run
 
 To create images and run all the containers, launch the script in the docker folder:
 
