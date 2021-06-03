@@ -9,7 +9,12 @@ USER root
 RUN python3 -m pip install tensorflow==1.5.0 && \
 		python3 -m pip install scikit-learn==0.22.2 && \
 		python3 -m pip install matplotlib && \
-		python3 -m pip install scikit-build
+		python3 -m pip install scikit-build && \
+		python3 -m pip install keras==2.2.4
+
+RUN apt-get update && \
+		apt-get install -y \
+			libcanberra-gtk-module libcanberra-gtk3-module
 
 RUN usermod -a -G video robot		
 
