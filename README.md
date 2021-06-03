@@ -1,5 +1,6 @@
 # THESIS
 
+<br/><br/>
 
 ## Components needed
 
@@ -9,7 +10,7 @@ The only components needed are the following:
 
 - [Docker-compose](https://docs.docker.com/compose/install/)
 
-<br/>
+<br/><br/>
 
 ## Environment setup
 
@@ -19,7 +20,7 @@ Once you have installed both components, clone this repository:
 
 Since the repository is made up with submodules, make sure to use the flag "--recurse-submodules"; the flag "-j8" is an optional performance optimization that fetches up to 8 submodules at a time in parallel.
 
-<br/>
+<br/><br/>
 
 ## Run
 
