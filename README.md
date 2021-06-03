@@ -1,7 +1,7 @@
 # THESIS
 
 
-## Install
+## Components needed
 
 The only components needed are the following:
 
@@ -9,7 +9,7 @@ The only components needed are the following:
 
 - [Docker-compose](https://docs.docker.com/compose/install/)
 
-## Setup
+## Environment setup
 
 Once you have installed both components, clone this repository: 
 
