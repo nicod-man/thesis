@@ -9,6 +9,8 @@ The only components needed are the following:
 
 - [Docker-compose](https://docs.docker.com/compose/install/)
 
+
+
 ## Environment setup
 
 Once you have installed both components, clone this repository: 
@@ -16,6 +18,8 @@ Once you have installed both components, clone this repository:
 	git clone --recurse-submodule -j8 https://github.com/nicod-man/thesis.git
 
 Since the repository is made up with submodules, make sure to use the flag "--recurse-submodules"; the flag "-j8" is an optional performance optimization that fetches up to 8 submodules at a time in parallel.
+
+
 
 ## Run
 
