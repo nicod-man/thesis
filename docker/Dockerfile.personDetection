@@ -22,6 +22,6 @@ RUN mkdir -p $HOME/src && cd $HOME/src && \
 		
 WORKDIR /home/robot/src/Person-Detection-and-Tracking
 
-CMD ["/usr/bin/python3","Person_det_track.py"]
+CMD ["/usr/bin/python3","stage_pd.py","--server"]
 #CMD ["/usr/bin/tmux"]
 
