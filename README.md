@@ -52,16 +52,16 @@ To send an image and evaluate it, in separate terminals launch:
 where ports allows to comunicate respectively with the Face Expression Recognition, the Face Detection and Person Detection modules.
 Both Face Detection and Person Detection will display images for 6 seconds, then they will be closed.
 
+- Note: the images provide by the client must be accessible from the docker container running the server.
+  Make sure also to share volume between the image acquisition process and the detection server.
+
 <br/>
 
 ## Stopping containers
 
-To stop and remove the running containers:
+To stop and remove the running containers, just launch the script:
 
 	./stop.bash
-
-- Note: the images provide by the client must be accessible from the docker container running the server.
-  Make sure also to share volume between the image acquisition process and the detection server.
 
 <br/>
 
