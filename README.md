@@ -26,7 +26,7 @@ Since the repository is made up with submodules, make sure to use the flag "--re
 
 To create images and run all the containers, launch the script in the docker folder:
 
-	cd /path_to_installed_repository/docker
+	cd /path_to_cloned_repository/docker
 	./build.bash
 
 If you wish to not use caches when building images, the script "build.bash" can be launched with the parameter "--no-cache":
