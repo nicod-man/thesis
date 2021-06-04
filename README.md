@@ -33,7 +33,7 @@ If you wish to not use caches when building images, the script "build.bash" can 
 
 	./build.bash --no-cache
 		
-It will take a while. 
+It will take a while. <br/>
 Once the images are built, we can start containers using the script:
 
 	./start.bash
