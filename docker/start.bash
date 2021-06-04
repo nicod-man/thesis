@@ -10,6 +10,8 @@ echo "------------------------"
 echo "- Running all services -"
 echo "------------------------"
 
+sleep 5
+
 # docker-compose rm -f
 # docker-compose -f $DCF pull $XSERVER fer facedetection persondetection
 # docker-compose -f $DCF up --build -d $XSERVER fer facedetection persondetection
