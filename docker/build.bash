@@ -20,10 +20,10 @@ if [ ! "$2" == "" ]; then
   DOCKERFILE_PD=$2
 fi
 if [ ! "$3" == "" ]; then
-  DOCKERFILE_PD=$3
+  DOCKERFILE_FER=$3
 fi
 if [ ! "$4" == "" ]; then
-  DOCKERFILE_PD=$4
+  DOCKERFILE_FD=$4
 fi
 
 VERSION=latest
