@@ -10,7 +10,7 @@ The only components needed are the following:
 
 - [Docker-compose](https://docs.docker.com/compose/install/)
 
-<br/><br/>
+<br/>
 
 ## Environment setup
 
@@ -20,7 +20,7 @@ Once you have installed both components, clone this repository:
 
 Since the repository is made up with submodules, make sure to use the flag "--recurse-submodules"; the flag "-j8" is an optional performance optimization that fetches up to 8 submodules at a time in parallel.
 
-<br/><br/>
+<br/>
 
 ## Build and run
 
@@ -40,7 +40,7 @@ Once the images are built, we can start containers using the script:
 
 Docker compose will then run all the services.
 
-<br/><br/>
+<br/>
 
 ## Test 
 
@@ -53,6 +53,7 @@ To send an image and evaluate it, in separate terminals launch:
 where ports allows to comunicate respectively with the Face Expression Recognition, the Face Detection and Person Detection modules.
 Both Face Detection and Person Detection will display images for 6 seconds, then they will be closed.
 
+<br/>
 
 ## Stopping containers
 
@@ -63,6 +64,7 @@ To stop and remove the running containers:
 - Note: the images provide by the client must be accessible from the docker container running the server.
   Make sure also to share volume between the image acquisition process and the detection server.
 
+<br/>
 
 ## Examples 
 
