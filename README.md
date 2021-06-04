@@ -29,10 +29,10 @@ To create images and run all the containers, launch the script in the docker fol
 	cd /path_to_cloned_repository/docker
 	./build.bash
 
-If you wish to not use caches when building images, the script "build.bash" can be launched with the parameter "--no-cache":
+If you wish to not use caches when building images, the script "build.bash" can be launched as:
 
 	./build.bash --no-cache
-	
+		
 Once the images are built, we can start containers using the script:
 
 	./start.bash
