@@ -6,9 +6,9 @@ DCF=docker-compose.yml
 XSERVER=""
 export SPD_DIR=`pwd | gawk '{ print gensub(/\/docker/, "", 1) }'` 
 
-echo "---------------------------"
+echo "------------------------"
 echo "- Running all services -"
-echo "---------------------------"
+echo "------------------------"
 
 # docker-compose rm -f
 # docker-compose -f $DCF pull $XSERVER fer facedetection persondetection
