@@ -3,7 +3,7 @@ version: "3.9"
 services:
 
     facedetection:
-        image: nicodman/thesis:facedetection
+        image: facedetection:latest
         container_name: facedetection_container
         dns: 8.8.8.8
         network_mode: "host"
@@ -23,7 +23,7 @@ services:
             - "python3 stage_fd.py --server -modelname fer"        
             
     fer:
-        image: nicodman/thesis:faceExpression
+        image: facexpressionrecognition:latest
         container_name: fer_container
         dns: 8.8.8.8
         network_mode: "host"
@@ -43,7 +43,7 @@ services:
             - "python3 stage_fer.py --server -modelname fer"        
     
     persondetection:
-        image: nicodman/thesis:persondetection
+        image: persondetection:latest
         container_name: persondetection_container
         dns: 8.8.8.8
         network_mode: "host"
