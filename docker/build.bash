@@ -36,7 +36,7 @@ echo "- building images - "
 echo "-----------------"
 
 docker build -t $IMAGENAME_PD:$VERSION -f $DOCKERFILE_PD . $CACHE
-docker build -t $IMAGENAME_FER:$VERSION -f $DOCKERFILE_FER. $CACHE
+docker build -t $IMAGENAME_FER:$VERSION -f $DOCKERFILE_FER . $CACHE
 docker build -t $IMAGENAME_FD:$VERSION -f $DOCKERFILE_FD . $CACHE
 
 docker tag $IMAGENAME_PD:$VERSION nicodman/thesis:persondetection
