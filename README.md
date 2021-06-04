@@ -1,6 +1,6 @@
 # THESIS
 
-<br/><br/>
+<br/>
 
 ## Components needed
 
