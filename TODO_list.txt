@@ -1,0 +1,65 @@
+Tmux parameters 
+
+  tmux new-window -t $SESSION:4 -n 'getimage'
+  tmux send-keys -t $SESSION:4 "cd ../actions && python getimage_actionproxy.py" C-m
+
+La prima riga si occupa di creare una nuova finestra con i seguenti parametri:
+    -n : nome della finestra (e.g: 'getimage')
+    -t :  target della finestra (e.g: '$SESSION:4')
+	
+La seconda riga si occupa di inviare i comandi alla finestra desiderata.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sensing di una persona
+
+Nel caso in cui nel piano sia presente l'azione di sensing, ciò che viene fatto è stabilito nei seguenti passi:
+	
+	1) Le azioni di sensing vengono eseguite tramite sense_actionproxy: lo script farà il check del fluente specificato (mypersonhere nel nostro caso)
+	
+	2) Il fluente viene modificato sulla base della propria logica:
+		
+		- vengono inizializzate le connessioni con ogni modulo di detection
+		- un'immagine viene
+			-- ricevuta - e trasformata da cvBridge - tramite la pubblicazione sul topic /image da parte di stageros
+			-- salvata (l'azione getimage_actionproxy invia la stringa 'get' al client takephoto che si occupa di salvarla) 
+			-- inviata ai vari moduli di detection
+		- ogni modulo si occupa di processare l'immagine ricevuta e di rispondere al client 
+		- sulla base delle varie risposte ricevute dai moduli, il fluente viene settato
+		    --  (1): fluente vero
+			--  (0): fluente falso
+			-- (-1): fluente sconosciuto
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TODO
+
+1. Cambiare il topic della pubblicazione immagini (prendere il flusso giusto proveniente dalla webcam)
+
+2. Una volta che il client processa l'immagine, provare ad eseguire il piano in simulazione ma utilizzando camera reale (se mi rileva in web allora fa una cosa
+    altrimenti se ne sta fermo senza fare nulla) 
+	
+3. Se è tutto ok, fare un primo video 
+
+4. Integrare il modulo di barcellona: creare il wrapper del loro modulo (un'azione che si chiami ad esempio accompany_actionproxy) ed usarla nel piano al posto
+    della semplice azione goto_actionproxy. 
+	
+5. Fare un video se funziona con il modulo di barcellona (NB: far vedere nel video sia la simulazione sia la telecamera mia)
+
+6. Contattare il professore
+
+
+
+
+1. Necessito che le foto vengano scattate non dentro la simulazione, ma dalla mia webcam. 
+    Per questo motivo, devo modifcare il client takephoto.py ma anche chi pubblica (stageros) ?
+	
+    Oltre ad iniziare il ros node @takephoto inizializzo anche il nodo @usbcam: in questo modo
+	la webcam si accende quando runno il bash di start (manda al file vision_bringup.py, all'interno
+	di "marrtino_apps", le due stringhe "@takephoto" e "@usbcam").
+	
+2. Testare che il client funzioni prendendo in input le foto dalla webcam.
+	
+3. Completare le modifiche al nuovo fluente "mypersonhere_fluentproxy".
+
+4. Creare il piano con il nuovo fluente.
+	
+	
