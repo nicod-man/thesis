@@ -1,0 +1,21 @@
+# Docker file for MARRtino navigation & laser packages
+# Luca Iocchi, 10/2/2021
+
+# docker build -t marrtino:navigation -f Dockerfile.navigation .
+
+FROM iocchi/marrtino:navigation
+
+ARG MACHTYPE=default
+
+USER robot
+
+# In order to use the forked repo, we shall delete the old repo and clone the new one
+
+RUN cd $HOME/src && rm -f -r marrtino_apps && \
+        git clone --depth 1 https://nicodman@bitbucket.org/nicodman/marrtino_apps.git
+
+WORKDIR /home/robot
+
+CMD [ "/bin/bash", "-ci", "cd ~/src/marrtino_apps/bringup && python nav_bringup.py" ]
+
+

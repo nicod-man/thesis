@@ -1,5 +1,0 @@
-Once containers are up and running, we can directly execute commands as we would be
-in the docker container itself with. Consider for instance to show an image coming from
-the rose node named "usbcam":
-
-docker exec -it "cd ~/src/my_marrtino_apps/camera && python takephoto.py --show"

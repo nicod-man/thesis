@@ -65,7 +65,7 @@ RUN /bin/bash -ci "cd $HOME/ros/catkin_ws && catkin_make"
 
 # Set up .bashrc
 
-RUN echo "export MARRTINO_APPS_HOME=$HOME/src/my_marrtino_apps" >> $HOME/.bashrc
+RUN echo "export MARRTINO_APPS_HOME=$HOME/src/marrtino_apps" >> $HOME/.bashrc
 
 RUN echo "export MARRTINO_VERSION=\"docker\"" >> $HOME/.bashrc
 
